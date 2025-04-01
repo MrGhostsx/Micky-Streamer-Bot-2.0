@@ -24,14 +24,14 @@ async def channel_receive_handler(bot: Client, broadcast: Message):
         await bot.leave_chat(broadcast.chat.id)
         return
     try:
-        # फाइल का नाम निकालें
+        # ᴇxᴛʀᴀᴄᴛ ꜰɪʟᴇ ɴᴀᴍᴇ
         file = broadcast.document or broadcast.video
         file_name = file.file_name if file else "Unknown File"
 
-        # बॉट फाइल को BIN_CHANNEL में फॉरवर्ड करेगा
+        # ᴛʜᴇ ʙᴏᴛ ᴡɪʟʟ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇ ꜰɪʟᴇ ᴛᴏ ʙɪɴ_ᴄʜᴀɴɴᴇʟ
         msg = await broadcast.forward(chat_id=BIN_CHANNEL)
 
-        # Stream & Download लिंक बनाए
+        # ᴄʀᴇᴀᴛᴇ ꜱᴛʀᴇᴀᴍ & ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ
         stream = f"{URL}watch/{msg.id}?hash={get_hash(msg)}"
         download = f"{URL}{msg.id}?hash={get_hash(msg)}"
         file_link = f"https://t.me/{BOT_USERNAME}?start=file_{msg.id}"
@@ -41,17 +41,17 @@ async def channel_receive_handler(bot: Client, broadcast: Message):
             quote=True
             )
             
-        # कैप्शन अपडेट करें
+        # ᴜᴘᴅᴀᴛᴇ ᴄᴀᴘᴛɪᴏɴ
         new_caption = f"<i><a href='{CHANNEL}'>{file_name}</a></i>"
 
-        # बटन बनाएं
+        # ᴄʀᴇᴀᴛᴇ ʙᴜᴛᴛᴏɴ
         buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton(" Stream", url=stream),
-             InlineKeyboardButton("Download", url=download)],
-            [InlineKeyboardButton('Get File', url=file_link)]
+            [InlineKeyboardButton("▶ ꜱᴛʀᴇᴀᴍ", url=stream),
+             InlineKeyboardButton("🢃 ᴅᴏᴡɴʟᴏᴀᴅ", url=download)],
+            [InlineKeyboardButton('⟳ ɢᴇᴛ ꜰɪʟᴇ', url=file_link)]
         ])
 
-        # चैनल मैसेज का कैप्शन और बटन अपडेट करें
+        # ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴍᴇꜱꜱᴀɢᴇ ᴄᴀᴘᴛɪᴏɴ ᴀɴᴅ ʙᴜᴛᴛᴏɴ
         await bot.edit_message_caption(
             chat_id=broadcast.chat.id,
             message_id=broadcast.id,
@@ -62,7 +62,7 @@ async def channel_receive_handler(bot: Client, broadcast: Message):
 
     except asyncio.exceptions.TimeoutError:
         print("Request Timed Out! Retrying...")
-        await asyncio.sleep(5)  # 5 सेकंड वेट करके दोबारा कोशिश करें
+        await asyncio.sleep(5)  # ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅꜱ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ
         await channel_receive_handler(bot, broadcast)
 
     except FloodWait as w:

@@ -1,4 +1,6 @@
 import logging
+from aiohttp import web
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -6,19 +8,14 @@ logging.basicConfig(
 logging.getLogger("aiohttp").setLevel(logging.ERROR)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
+
 from pyrogram import Client
 from info import *
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
-from aiohttp import web
-
-#Dont Remove My Credit @MrGhostsx
-#This Repo Is By @Tech_Shreyansh 
-# For Any Kind Of Error Ask Us In Support Group @MrGhostsx2
 
 class WebXBot(Client):
-
     def __init__(self):
         super().__init__(
             name=SESSION,
@@ -32,10 +29,6 @@ class WebXBot(Client):
 
     async def set_self(self):
         temp.BOT = self
-
-#Dont Remove My Credit @MrGhostsx
-#This Repo Is By @Tech_Shreyansh 
-# For Any Kind Of Error Ask Us In Support Group @MrGhostsx2
     
     async def iter_messages(
         self,
@@ -52,9 +45,17 @@ class WebXBot(Client):
             for message in messages:
                 yield message
                 current += 1
-      
-Webtsbot = WebXBot()
 
+async def web_server():
+    """Properly initialize and return a web.Application instance"""
+    app = web.Application()
+    
+    # Add your routes here - each route handler MUST return a response
+    app.router.add_get('/', lambda request: web.Response(text="Bot is running!"))
+    
+    return app  # This return is crucial
+
+Webtsbot = WebXBot()
 multi_clients = {}
 work_loads = {}
 

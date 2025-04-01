@@ -60,10 +60,10 @@ async def private_receive_handler(c: Client, m: Message):
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("▶ ꜱᴛʀᴇᴀᴍ", url=stream),
+                    [InlineKeyboardButton("▷ ꜱᴛʀᴇᴀᴍ", url=stream),
                      InlineKeyboardButton("🢃 ᴅᴏᴡɴʟᴏᴀᴅ", url=download)],
                     [InlineKeyboardButton('⟳ ɢᴇᴛ ꜰɪʟᴇ', url=file_link),
-                    InlineKeyboardButton('⤴︎ ꜱʜᴀʀᴇ', url=share_link),
+                    InlineKeyboardButton('⤹ ꜱʜᴀʀᴇ', url=share_link),
                     InlineKeyboardButton('ㄨ ᴄʟᴏꜱᴇ', callback_data='close_data')]
                 ])
             )
@@ -75,7 +75,7 @@ async def private_receive_handler(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("🢃 ᴅᴏᴡɴʟᴏᴀᴅ", url=download),
                     InlineKeyboardButton('⟳ ɢᴇᴛ ꜰɪʟᴇ', url=file_link)],
-                   [ InlineKeyboardButton('⤴︎ ꜱʜᴀʀᴇ', url=share_link),
+                   [ InlineKeyboardButton('⤹ ꜱʜᴀʀᴇ', url=share_link),
                     InlineKeyboardButton('ㄨ ᴄʟᴏꜱᴇ', callback_data='close_data')]
                 ])
              )

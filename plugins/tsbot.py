@@ -84,7 +84,7 @@ async def is_user_joined(bot, message: Message):
 # For Any Kind Of Error Ask Us In Support Group @MrGhostsx2
     
 async def is_user_allowed(user_id):
-    """📌 यह फंक्शन चेक करेगा कि यूजर की फाइल लिमिट खत्म हुई है या नहीं"""
+    """📌 ᴛʜɪꜱ ꜰᴜɴᴄᴛɪᴏɴ ᴡɪʟʟ ᴄʜᴇᴄᴋ ɪꜰ ᴛʜᴇ ᴜꜱᴇʀ'ꜱ ꜰɪʟᴇ ʟɪᴍɪᴛ ɪꜱ ʀᴇᴀᴄʜᴇᴅ ᴏʀ ɴᴏᴛ"""
     current_time = time.time()
 
     if ENABLE_LIMIT:

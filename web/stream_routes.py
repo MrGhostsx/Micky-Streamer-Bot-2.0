@@ -49,9 +49,8 @@ async def stream_handler(request: web.Request):
         raise web.HTTPForbidden(text=e.message)
     except FIleNotFound as e:
         raise web.HTTPNotFound(text=e.message)
-    except (AttributeError, BadStatusLine, ConnectionResetError) as e:
-        logging.error(f"Connection error: {str(e)}")
-        return web.Response(status=500, text="Internal server error")
+    except (AttributeError, BadStatusLine, ConnectionResetError):
+        pass
     except Exception as e:
         logging.critical(e.with_traceback(None))
         raise web.HTTPInternalServerError(text=str(e))
@@ -76,9 +75,8 @@ async def stream_handler(request: web.Request):
         raise web.HTTPForbidden(text=e.message)
     except FIleNotFound as e:
         raise web.HTTPNotFound(text=e.message)
-    except (AttributeError, BadStatusLine, ConnectionResetError) as e:
-        logging.error(f"Connection error: {str(e)}")
-        return web.Response(status=500, text="Internal server error")
+    except (AttributeError, BadStatusLine, ConnectionResetError):
+        pass
     except Exception as e:
         logging.critical(e.with_traceback(None))
         raise web.HTTPInternalServerError(text=str(e))
@@ -170,7 +168,7 @@ async def media_streamer(request: web.Request, id: int, secure_hash: str):
             "Content-Disposition": f'{disposition}; filename="{file_name}"',
             "Accept-Ranges": "bytes",
         },
-    )
+  )
 #Dont Remove My Credit @MrGhostsx
 #This Repo Is By @Tech_Shreyansh 
 # For Any Kind Of Error Ask Us In Support Group @MrGhostsx2

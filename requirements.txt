@@ -1,0 +1,16 @@
+pyrofork==2.3.48
+tgcrypto
+aiohttp
+python-dotenv<=0.20.0
+motor
+aiofiles
+dnspython
+apscheduler
+requests
+psutil
+jinja2
+pytz
+
+#Dont Remove My Credit @MrGhostsx
+#This Repo Is By @Tech_Shreyansh 
+# For Any Kind Of Error Ask Us In Support Group @MrGhostsx2

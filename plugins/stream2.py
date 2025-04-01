@@ -46,7 +46,7 @@ async def channel_receive_handler(bot: Client, broadcast: Message):
 
         # ᴄʀᴇᴀᴛᴇ ʙᴜᴛᴛᴏɴ
         buttons = InlineKeyboardMarkup([
-            [InlineKeyboardButton("▶ ꜱᴛʀᴇᴀᴍ", url=stream),
+            [InlineKeyboardButton("▷ ꜱᴛʀᴇᴀᴍ", url=stream),
              InlineKeyboardButton("🢃 ᴅᴏᴡɴʟᴏᴀᴅ", url=download)],
             [InlineKeyboardButton('⟳ ɢᴇᴛ ꜰɪʟᴇ', url=file_link)]
         ])

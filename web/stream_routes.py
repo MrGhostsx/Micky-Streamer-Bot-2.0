@@ -11,6 +11,10 @@ from web.utils.render_template import render_page
 
 routes = web.RouteTableDef()
 
+#Dont Remove My Credit @MrGhostsx
+#This Repo Is By @Tech_Shreyansh 
+# For Any Kind Of Error Ask Us In Support Group @MrGhostsx2
+
 @routes.get("/", allow_head=True)
 async def root_route_handler(_):
     return web.json_response(
@@ -52,6 +56,10 @@ async def stream_handler(request: web.Request):
         logging.critical(e.with_traceback(None))
         raise web.HTTPInternalServerError(text=str(e))
 
+#Dont Remove My Credit @MrGhostsx
+#This Repo Is By @Tech_Shreyansh 
+# For Any Kind Of Error Ask Us In Support Group @MrGhostsx2
+
 @routes.get(r"/{path:\S+}", allow_head=True)
 async def stream_handler(request: web.Request):
     try:
@@ -77,6 +85,10 @@ async def stream_handler(request: web.Request):
 
 class_cache = {}
 
+#Dont Remove My Credit @MrGhostsx
+#This Repo Is By @Tech_Shreyansh 
+# For Any Kind Of Error Ask Us In Support Group @MrGhostsx2
+
 async def media_streamer(request: web.Request, id: int, secure_hash: str):
     try:
         range_header = request.headers.get("Range", 0)
@@ -94,7 +106,6 @@ async def media_streamer(request: web.Request, id: int, secure_hash: str):
             logging.debug(f"Creating new ByteStreamer object for client {index}")
             tg_connect = ByteStreamer(faster_client)
             class_cache[faster_client] = tg_connect
-        
         logging.debug("before calling get_file_properties")
         file_id = await tg_connect.get_file_properties(id)
         logging.debug("after calling get_file_properties")
@@ -164,6 +175,7 @@ async def media_streamer(request: web.Request, id: int, secure_hash: str):
     except Exception as e:
         logging.error(f"Streaming error: {str(e)}")
         return web.Response(status=500, text="Error occurred during media streaming")
+
 #Dont Remove My Credit @MrGhostsx
 #This Repo Is By @Tech_Shreyansh 
 # For Any Kind Of Error Ask Us In Support Group @MrGhostsx2

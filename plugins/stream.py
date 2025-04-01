@@ -31,7 +31,7 @@ async def private_receive_handler(c: Client, m: Message):
     is_allowed, remaining_time = await is_user_allowed(user_id)
     if not is_allowed:
         await m.reply_text(
-            f"🚫 **आप 10 फाइल पहले ही भेज चुके हैं!**\nकृपया **{remaining_time} सेकंड** बाद फिर से प्रयास करें।",
+            f"ⓘ **ʏᴏᴜ ʜᴀᴠᴇ ᴀʟʀᴇᴀᴅʏ ꜱᴇɴᴛ 10 ꜰɪʟᴇꜱ!**\nᴘʟᴇᴀꜱᴇ **{remaining_time} ᴛʀʏ ᴀɢᴀɪɴ ᴀꜰᴛᴇʀ** ꜱᴇᴄᴏɴᴅꜱ.",
             quote=True
         )
         return
@@ -53,18 +53,18 @@ async def private_receive_handler(c: Client, m: Message):
             disable_web_page_preview=True, quote=True
         )
 
-        # ✅ अगर file_name मौजूद है तो पूरा कैप्शन भेजें, वरना सिर्फ डाउनलोड लिंक भेजें
+        # ✅ ɪꜰ ꜰɪʟᴇ_ɴᴀᴍᴇ ᴇxɪꜱᴛꜱ ᴛʜᴇɴ ꜱᴇɴᴅ ꜰᴜʟʟ ᴄᴀᴘᴛɪᴏɴ, ᴇʟꜱᴇ ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ
         if file_name:
             await m.reply_text(
                 text=script.CAPTION_TXT.format(CHANNEL, file_name, file_size, stream, download),
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton(" Stream ", url=stream),
-                     InlineKeyboardButton(" Download ", url=download)],
-                    [InlineKeyboardButton('Get File', url=file_link),
-                    InlineKeyboardButton('share', url=share_link),
-                    InlineKeyboardButton('close', callback_data='close_data')]
+                    [InlineKeyboardButton("▶ ꜱᴛʀᴇᴀᴍ", url=stream),
+                     InlineKeyboardButton("🢃 ᴅᴏᴡɴʟᴏᴀᴅ", url=download)],
+                    [InlineKeyboardButton('⟳ ɢᴇᴛ ꜰɪʟᴇ', url=file_link),
+                    InlineKeyboardButton('⤴︎ ꜱʜᴀʀᴇ', url=share_link),
+                    InlineKeyboardButton('ㄨ ᴄʟᴏꜱᴇ', callback_data='close_data')]
                 ])
             )
         else:
@@ -73,10 +73,10 @@ async def private_receive_handler(c: Client, m: Message):
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton(" Download ", url=download),
-                    InlineKeyboardButton('Get File', url=file_link)],
-                   [ InlineKeyboardButton('share', url=share_link),
-                    InlineKeyboardButton('close', callback_data='close_data')]
+                    [InlineKeyboardButton("🢃 ᴅᴏᴡɴʟᴏᴀᴅ", url=download),
+                    InlineKeyboardButton('⟳ ɢᴇᴛ ꜰɪʟᴇ', url=file_link)],
+                   [ InlineKeyboardButton('⤴︎ ꜱʜᴀʀᴇ', url=share_link),
+                    InlineKeyboardButton('ㄨ ᴄʟᴏꜱᴇ', callback_data='close_data')]
                 ])
              )
 

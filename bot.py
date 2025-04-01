@@ -30,67 +30,48 @@ from web.server.clients import initialize_clients
 
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
-
-# Initialize Webtsbot first
-try:
-    Webtsbot.start()
-except Exception as e:
-    logging.error(f"Failed to start Webtsbot: {e}")
-    sys.exit(1)
-
-# Fix the event loop creation
-try:
-    loop = asyncio.get_event_loop()
-except RuntimeError:
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
+Webtsbot.start()
+loop = asyncio.get_event_loop()
 
 async def start():
     print('\n')
     print('Initalizing Your Bot')
-    try:
-        bot_info = await Webtsbot.get_me()
-        await initialize_clients()
-        
-        for name in files:
-            with open(name) as a:
-                patt = Path(a.name)
-                plugin_name = patt.stem.replace(".py", "")
-                plugins_dir = Path(f"plugins/{plugin_name}.py")
-                import_path = "plugins.{}".format(plugin_name)
-                spec = importlib.util.spec_from_file_location(import_path, plugins_dir)
-                load = importlib.util.module_from_spec(spec)
-                spec.loader.exec_module(load)
-                sys.modules["plugins." + plugin_name] = load
-                print("Imported => " + plugin_name)
+    bot_info = await Webtsbot.get_me()
+    await initialize_clients()
+    for name in files:
+        with open(name) as a:
+            patt = Path(a.name)
+            plugin_name = patt.stem.replace(".py", "")
+            plugins_dir = Path(f"plugins/{plugin_name}.py")
+            import_path = "plugins.{}".format(plugin_name)
+            spec = importlib.util.spec_from_file_location(import_path, plugins_dir)
+            load = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(load)
+            sys.modules["plugins." + plugin_name] = load
+            print("Imported => " + plugin_name)
 
-        if ON_HEROKU:
-            asyncio.create_task(ping_server())
-            
-        me = await Webtsbot.get_me()
-        temp.BOT = Webtsbot
-        temp.ME = me.id
-        temp.U_NAME = me.username
-        temp.B_NAME = me.first_name
-        tz = pytz.timezone('Asia/Kolkata')
-        today = date.today()
-        now = datetime.now(tz)
-        time = now.strftime("%H:%M:%S %p")
-        
-        if LOG_CHANNEL:
-            await Webtsbot.send_message(LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
-        if ADMINS:
-            await Webtsbot.send_message(ADMINS[0], text='<b>ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ !!</b>')
-            
-        app = web.AppRunner(await web_server())
-        await app.setup()
-        bind_address = "0.0.0.0"
-        await web.TCPSite(app, bind_address, PORT).start()
-        await idle()
-        
-    except Exception as e:
-        logging.error(f"Error in bot initialization: {e}", exc_info=True)
-        raise
+#Dont Remove My Credit @MrGhostsx
+#This Repo Is By @Tech_Shreyansh 
+# For Any Kind Of Error Ask Us In Support Group @MrGhostsx2
+    
+    if ON_HEROKU:
+        asyncio.create_task(ping_server())
+    me = await Webtsbot.get_me()
+    temp.BOT = Webtsbot
+    temp.ME = me.id
+    temp.U_NAME = me.username
+    temp.B_NAME = me.first_name
+    tz = pytz.timezone('Asia/Kolkata')
+    today = date.today()
+    now = datetime.now(tz)
+    time = now.strftime("%H:%M:%S %p")
+    await Webtsbot.send_message(LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+    await Webtsbot.send_message(ADMINS[0], text='<b>ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ !!</b>')
+    app = web.AppRunner(await web_server())
+    await app.setup()
+    bind_address = "0.0.0.0"
+    await web.TCPSite(app, bind_address, PORT).start()
+    await idle()
 
 #Dont Remove My Credit @MrGhostsx
 #This Repo Is By @Tech_Shreyansh 
@@ -101,5 +82,4 @@ if __name__ == '__main__':
         loop.run_until_complete(start())
     except KeyboardInterrupt:
         logging.info('----------------------- Service Stopped -----------------------')
-    except Exception as e:
-        logging.error(f"Fatal error: {e}", exc_info=True)
+

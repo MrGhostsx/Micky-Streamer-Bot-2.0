@@ -3,9 +3,9 @@ from os import environ, getenv
 
 id_pattern = re.compile(r'^.\d+$')
 
-#Dont Remove My Credit @AV_BOTz_UPDATE 
-#This Repo Is By @BOT_OWNER26 
-# For Any Kind Of Error Ask Us In Support Group @AV_SUPPORT_GROUP
+#Dont Remove My Credit @Tech_Shreyansh
+#This Repo Is By @SmartEdith_Bot 
+# For Any Kind Of Error Ask Us In Support Group @Tech_Shreyansh2
 
 # Bot information
 SESSION = environ.get('SESSION', 'MrGhostsx')
@@ -49,9 +49,9 @@ FSUB = environ.get("FSUB", True)
 PORT = int(getenv('PORT', '2626'))
 NO_PORT = bool(getenv('NO_PORT', False))
 
-#Dont Remove My Credit @AV_BOTz_UPDATE 
-#This Repo Is By @BOT_OWNER26 
-# For Any Kind Of Error Ask Us In Support Group @AV_SUPPORT_GROUP
+#Dont Remove My Credit @Tech_Shreyansh
+#This Repo Is By @SmartEdith_Bot 
+# For Any Kind Of Error Ask Us In Support Group @Tech_Shreyansh2
 
 # time information
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes

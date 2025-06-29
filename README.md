@@ -65,7 +65,7 @@ DATABASE_NAME=cluster0
 DATABASE_URI=mongodan@cluster0.7nop1
 FQDN=ts-file-to-link-koyeb.app
 LOG_CHANNEL=-100
-OWNER_USERNAME=BOT_OWNER26
+OWNER_USERNAME=Tech_Shreyansh29
 PORT=2626
 ```
 </details>

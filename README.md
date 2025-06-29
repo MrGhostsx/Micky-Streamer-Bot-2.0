@@ -83,7 +83,9 @@ restart - To restart the bot [FOR ADMINS USE ONLY]
 ### DEPLOY ON KOYRB
 
 <p><br>                 
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/MrGhostsx/Micky-Streamer-Bot-2.0&branch=main&name=main2.0"> 
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/MrGhostsx/Micky-Streamer-Bot-2.0&branch=main2.0&name=Micky-Streamer-Bot-2.0">
+<img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="DEPLOY ON KOYRB">
+</a></p>
 
 ### DEPLOY ON HEROKU
 <p><br>

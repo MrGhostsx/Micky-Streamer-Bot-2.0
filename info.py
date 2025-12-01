@@ -55,7 +55,7 @@ QR_CODE = environ.get('QR_CODE', 'https://i.ibb.co/svXQZCSY/Uploaded-8063565025.
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://i.ibb.co/DDQ3H0tS/Uploaded-8063565025.png")  # Verify success image
 AUTH_PICS = environ.get('AUTH_PICS', 'https://i.ibb.co/zTcPStWD/Uploaded-8063565025.jpg')  # Auth step image
 PICS = environ.get('PICS', 'https://envs.sh/_pM.jpg')  # Default info image
-FILE_PIC = environ.get('FILE_PIC', 'https://i.ibb.co/bj4My0bW/photo-2025-07-21-02-15-21-7529360175656861700.jpg') # file image 
+FILE_PIC = environ.get('FILE_PIC', 'https://i.ibb.co/zhgRs8Ph/Uploaded-8063565025.jpg') # file image 
 
 # 📝 File Captions
 FILE_CAPTION = environ.get('FILE_CAPTION', f"{script.CAPTION}")  # Caption for single file

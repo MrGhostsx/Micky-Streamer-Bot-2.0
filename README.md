@@ -1,6 +1,6 @@
-![GitHub contributors](https://img.shields.io/github/contributors/Botsthe/AV-FILE-TO-LINK-PRO?style=flat&color=green)
-![GitHub repo size](https://img.shields.io/github/repo-size/Botsthe/AV-FILE-TO-LINK-PRO?color=green)
-![GitHub](https://img.shields.io/github/license/Botsthe/AV-FILE-TO-LINK-PRO?color=green)
+![GitHub contributors](https://img.shields.io/github/contributors/MrGhostsx/Micky-Streamer-Bot-2.0?style=flat&color=green)
+![GitHub repo size](https://img.shields.io/github/repo-size/MrGhostsx/Micky-Streamer-Bot-2.0?color=green)
+![GitHub](https://img.shields.io/github/license/MrGhostsx/Micky-Streamer-Bot-2.0?color=green)
 
 ---
 
@@ -8,7 +8,7 @@
 
 Here is our Demo bot:  
 
-[![👉 Click Here](https://img.shields.io/badge/Demo%20Bot-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/AV_SUPPORT_GROUP)](https://t.me/AV_F2L_BOT)
+[![👉 Click Here](https://img.shields.io/badge/Demo%20Bot-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/Tech_Shreyansh1)](https://t.me/MovieStreamsBo)
 ---
 
 ### 🛠 Need Deployment Support?
@@ -16,7 +16,7 @@ Here is our Demo bot:
 If you encounter any issues deploying the bot, feel free to open an issue in the GitHub repo, or reach out in our support group linked above.  
 We are here to help you!
 
-[![Join Support Group](https://img.shields.io/badge/Join%20Support%20Group-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/AV_SUPPORT_GROUP)](https://t.me/AV_SUPPORT_GROUP)
+[![Join Support Group](https://img.shields.io/badge/Join%20Support%20Group-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/Tech_Shreyansh1)](https://t.me/Tech_Shreyansh1)
 
   <h1 align="center"></h1>
 <p align="center"> 
@@ -27,9 +27,9 @@ We are here to help you!
     <br />
    </strong></a>
     <br />
-    <a href="https://t.me/AV_SUPPORT_GROUP">Report a Bug</a>
+    <a href="https://t.me/Tech_Shreyansh1">Report a Bug</a>
     |
-    <a href="https://t.me/AV_SUPPORT_GROUP">Request Feature</a>
+    <a href="https://t.me/Tech_Shreyansh1">Request Feature</a>
   </p>
 <hr>
 
@@ -127,7 +127,7 @@ premium_user      - List all premium users [FOR ADMINS ONLY]
 ### 🔹 DEPLOY ON RENDER
 
 <p><br>
-<a href="https://render.com/deploy?repo=https://github.com/Botsthe/AV-FILE-TO-LINK-PRO">
+<a href="https://render.com/deploy?repo=https://github.com/MrGhostsx/Micky-Streamer-Bot-2.0">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="DEPLOY ON RENDER">
 </a></p>
 
@@ -136,7 +136,7 @@ premium_user      - List all premium users [FOR ADMINS ONLY]
 ### 🔹 DEPLOY ON KOYEB
 
 <p><br>
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Botsthe/AV-FILE-TO-LINK-PRO&branch=main&name=AV-FILE-TO-LINK-PRO">
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/MrGhostsx/Micky-Streamer-Bot-2.0&branch=main&name=Micky-Streamer-Bot">
 <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="DEPLOY ON KOYEB">
 </a></p>
 
@@ -145,7 +145,7 @@ premium_user      - List all premium users [FOR ADMINS ONLY]
 ### 🔹 DEPLOY ON HEROKU
 
 <p><br>
-<a href="https://heroku.com/deploy?template=https://github.com/Botsthe/AV-FILE-TO-LINK-PRO.git">
+<a href="https://heroku.com/deploy?template=https://github.com/MrGhostsx/Micky-Streamer-Bot-2.0.git">
 <img src="https://www.herokucdn.com/deploy/button.svg" alt="DEPLOY ON HEROKU">
 </a></p>
 
@@ -153,7 +153,7 @@ premium_user      - List all premium users [FOR ADMINS ONLY]
 
 ### 🔹 DEPLOY ON VPS
 ```
-git clone https://github.com/Botsthe/AV-FILE-TO-LINK-PRO.git
+git clone https://github.com/MrGhostsx/Micky-Streamer-Bot-2.0.git
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
@@ -177,7 +177,7 @@ python3 bot.py
 - File size limit handler  
 - Fully cleaned and optimized code  
 - Deploy to Koyeb, Render, Heroku & more  
-- 24x7 [Developer Support](https://telegram.me/AV_SUPPORT_GROUP)  
+- 24x7 [Developer Support](https://telegram.me/Tech_Shreyansh1)  
 - Multi-deploy supported  
 - And many more...
 
@@ -203,15 +203,15 @@ python3 bot.py
 
 ### CREDIT GITHUB 
 
-- [BOTSTHE](https://github.com/Botsthe)
+- [MrGhost](https://github.com/MrGhostsx)
 
 ### CONTACT DEVELOPER
 
-- [𝙰𝙼𝙰𝙽 𝚅𝙸𝚂𝙷𝚆𝙰𝙺𝙰𝚁𝙼𝙰](https://telegram.me/BOT_OWNER26)
+- [𝙰𝙼𝙰𝙽 𝚅𝙸𝚂𝙷𝚆𝙰𝙺𝙰𝚁𝙼𝙰](https://telegram.me/AlphDragon)
 
 ### BUY ME A COFFEE
 
-- [PHONE PE](https://envs.sh/Hgz.jpg)
+- [PHONE PE](https://i.ibb.co/svXQZCSY/Uploaded-8063565025.jpg)
 
 ### 📌 NOTE
 

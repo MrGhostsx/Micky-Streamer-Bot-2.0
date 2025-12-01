@@ -20,7 +20,7 @@ We are here to help you!
 
   <h1 align="center"></h1>
 <p align="center"> 
-  <img src="https://image.zaw-myo.workers.dev/image/305e6e0f-9ecf-4912-88f6-b2898db73183" alt="Cover Image" width="650">
+  <img src="https://i.ibb.co/39yrLYsJ/Uploaded-8063565025.png" alt="Cover Image" width="650">
   </a>
  <p align="center">
     A Telegram bot to turn all media and documents files to instant direct download and stream link .
